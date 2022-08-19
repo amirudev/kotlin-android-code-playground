@@ -12,11 +12,48 @@
         android:layout_height="fill_parent"
         android:layout_weight="1"
         android:padding="16dp">
-
-        <Button
+        
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Thread 1"/>
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_c_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Refresh Message"/>
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/raisin_black"
+                android:layout_marginVertical="10dp"/>
+
+            <Button
+                android:id="@+id/btn_c_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thread 1"/>
+
+            <Button
+                android:id="@+id/btn_c_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Multiple Thread"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/raisin_black"
+                android:layout_marginVertical="10dp"/>
+
+            <Button
+                android:id="@+id/btn_c_clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clear Log"/>
+        </LinearLayout>
     </ScrollView>
     
     <LinearLayout
@@ -56,6 +93,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_console"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Thread[Thread-0,5,main] has run."
@@ -75,6 +113,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_log"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="19/08/2022 14:18:20:001 Exec Log: Thread 1"
